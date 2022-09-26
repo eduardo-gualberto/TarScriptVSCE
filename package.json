@@ -1,0 +1,40 @@
+{
+  "name": "tars",
+  "displayName": "tars",
+  "description": "VSCode extension for TarScript language",
+  "version": "0.0.1",
+  "icon": "https://thumbs.dreamstime.com/b/tar-icon-vector-morocco-concept-thin-line-illustration-tar-editable-stroke-tar-linear-sign-use-web-mobile-tar-192173354.jpg",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "tars",
+        "aliases": [
+          "TarScript",
+          "tars"
+        ],
+        "icon": {
+          "light": "./tar.png",
+          "dark": "./tar.png"
+        },
+        "extensions": [
+          "tars",
+          "star"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tars",
+        "scopeName": "source.tars",
+        "path": "./syntaxes/tars.tmLanguage.json"
+      }
+    ]
+  }
+}

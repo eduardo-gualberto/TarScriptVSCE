@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TarScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#config_keys"
+		},
+		{
+			"include": "#tar_files"
+		},
+		{
+			"include": "#regular_files"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.tars",
+					"match": "\\b(LISTAR|COMPRIMIR|EXTRAIR|TAMANHO|ADICIONAR|ARQUIVO|PARA|SOMENTE|CONFIG|END_CONFIG)\\b"
+				}
+			]
+		},
+		"config_keys": {
+			"patterns": [
+				{
+					"name": "keyword.other.tars",
+					"match": "\\b(NIVEL_VERBOSO\\s?:\\s?[0-3]|INTERATIVO|MANTER_PERMISSOES|FORMATO\\s?:\\s?(gnu|oldgnu|pax|posix|ustar|v7))\\b"
+				}
+			]
+		},
+		"tar_files": {
+			"patterns": [
+				{
+					"name": "markup.underline",
+					"match": "\\b[A-Za-z]([A-Za-z]|[0-9]|_|-)*.(tar.gz|tar.xz|tar.bz2|tar)\\b"
+				}
+			]
+		},
+		"regular_files": {
+			"patterns": [
+				{
+					"name": "variable.name",
+					"match": "\\b[A-Za-z]([A-Za-z]|[0-9]|_|-)*.([A-Za-z]|[0-9]|_|-)+\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.tars"
+}
