@@ -20,6 +20,8 @@ git clone https://github.com/eduardo-gualberto/TarScriptVSCE.git
 cp -r TarScriptVSCE ~/.vscode/extensions/
 ```
 
+Desta forma basta reiniciar o VSCode e a extensão deve funcionar.
+
 ## Demonstração da Extensão
 
 Abaixo é mostrado o *syntax highlight*, assim como o ícone dos arquivos e também as extensões que são reconhecidas como pertencentes a **TarScript** (*.tars* e *.star*)
